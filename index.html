@@ -2,15 +2,117 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>You Tube to MP3</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Open Sans';
+            background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+            background-size: 400% 400%;
+            -webkit-animation: Gradient 15s ease infinite;
+            -moz-animation: Gradient 15s ease infinite;
+            animation: Gradient 15s ease infinite;
+        }
+        
+        @-webkit-keyframes Gradient {
+            0% {
+                background-position: 0% 50%
+            }
+            50% {
+                background-position: 100% 50%
+            }
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+        @-moz-keyframes Gradient {
+            0% {
+                background-position: 0% 50%
+            }
+            50% {
+                background-position: 100% 50%
+            }
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+        @keyframes Gradient {
+            0% {
+                background-position: 0% 50%
+            }
+            50% {
+                background-position: 100% 50%
+            }
+            100% {
+                background-position: 0% 50%
+            }
+        }
+        .box {position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%); color:white;}
+        
+        .title {color:white; font-size: 30px; text-align: center; margin-bottom:20px;}
+        .copyright {color:white; font-size: 15px; text-align: center; margin-top:20px;}
+        
+        input[type=text] {  
+            color:white;
+            width: 300px;
+            height: 50px;
+            background: linear-gradient(-45deg, #964932, #821e44, #136582, #149274);
+            background-size: 400% 400%;
+            -webkit-animation: Gradient 15s ease infinite;
+            -moz-animation: Gradient 15s ease infinite;
+            animation: Gradient 15s ease infinite;
+            border: none;
+            font-size: 20px;
+            float: left;
+            padding-left: 25px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            outline: inherit;
+        }
+        
+        ::placeholder {
+            color: white;
+            opacity: 1;
+        }
+        
+        button {     
+            -webkit-border-top-right-radius: 5px;
+            -webkit-border-bottom-right-radius: 5px;
+            -moz-border-radius-topright: 5px;
+            -moz-border-radius-bottomright: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border: none;
+            background: linear-gradient(-90deg, #964932, #821e44, #136582, #149274);
+            background-size: 400% 400%;
+            -webkit-animation: Gradient 15s ease infinite;
+            -moz-animation: Gradient 15s ease infinite;
+            animation: Gradient 15s ease infinite;
+            height: 52px;
+            width: 50px;
+            font-size: 10pt;
+            -webkit-transition: all .55s ease;
+            -moz-transition: all .55s ease;
+            -ms-transition: all .55s ease;
+            -o-transition: all .55s ease;
+            transition: all .55s ease;
+            transition: all .55s ease;
+            margin-left:-4px; 
+            outline: inherit;
+            color:white;
+        }
+    </style>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-
+    <div class="box">
+        <div class="title">YouTube to MP3</div>
+        <input type="text" placeholder="Adres URL You Tube" /> <button><i class="fas fa-cloud-download-alt"></i></button>
+        <div class="copyright">Wykonał: Mateusz Henicz</div>
+    </div>
     <script>
       // You can also require other files to run in this process
       require('./renderer.js')
